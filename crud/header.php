@@ -61,7 +61,9 @@ td{
 
 <ul>
   <li><a href="crudhandler.php?create" name="create">Create person</a></li>
+<?php if($_SESSION['user']['role'] === 'medewerker'):?>
   <li><a href="medewerker.php">medewerker</a></li>
+<?php endif; ?>
 <?php if($_SESSION['user']['role'] === 'admin'):?>
   <li><a href="admin.php">admin</a></li>
 <?php endif; ?>
